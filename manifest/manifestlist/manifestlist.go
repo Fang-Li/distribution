@@ -7,7 +7,6 @@ import (
 
 	"github.com/docker/distribution"
 	"github.com/docker/distribution/manifest"
-	"github.com/opencontainers/go-digest"
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
 )
 
@@ -109,10 +108,6 @@ type PlatformSpec struct {
 // A ManifestDescriptor references a platform-specific manifest.
 type ManifestDescriptor struct {
 	distribution.Descriptor
-
-	// Platform specifies which platform the manifest pointed to by the
-	// descriptor runs on.
-	Platform PlatformSpec `json:"platform"`
 }
 
 // ManifestList references manifests for various platforms.
